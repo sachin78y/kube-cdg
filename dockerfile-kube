@@ -1,0 +1,8 @@
+FROM httpd
+MAINTAINER "Sachin Yadav"
+RUN apt-get update -y
+RUN apt-get install apache2 apache2-utils net-tools vim wget  zip unzip -y
+WORKDIR /usr/local/apache2/htdocs
+RUN echo "Welcome to hitachi" > /usr/local/apache2/htdocs/index.html 
+ENTRYPOINT ["apachectl", "-D", "FOREGROUND"]
+EXPOSE 80
