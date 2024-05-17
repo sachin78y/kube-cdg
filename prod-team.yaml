@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hitachi 
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: prod
+  template:
+    metadata:
+      labels:
+        app: prod
+    spec:
+      containers:
+      - name: httpd-prod
+        image: sachin900:kube-1:latest
+        ports:
+        - containerPort: 80  # Adjust the port if needed
+
