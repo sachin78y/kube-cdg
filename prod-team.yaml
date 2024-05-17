@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: httpd-prod
-        image: sachin900:kube-1:latest
+        image: sachin900/kube-2:latest
         ports:
         - containerPort: 80  # Adjust the port if needed
 
