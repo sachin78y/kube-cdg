@@ -1,7 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hitachi 
+  name: hitachi
+  namespace: prod-team 
 spec:
   replicas: 10
   selector:
