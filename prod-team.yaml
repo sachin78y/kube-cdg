@@ -9,7 +9,10 @@ spec:
     matchLabels:
       app: prod
   strategy:
-     type: Recreate
+    type: RolligUpdate
+    rollingUpdate:
+       maxSurge: 1
+
   template:
     metadata:
       labels:
