@@ -8,6 +8,8 @@ spec:
   selector:
     matchLabels:
       app: prod
+  strategy:
+     type: Recreate
   template:
     metadata:
       labels:
